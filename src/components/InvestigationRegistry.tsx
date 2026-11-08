@@ -161,7 +161,7 @@ export const InvestigationRegistry: React.FC<InvestigationRegistryProps> = ({
               <span>BlockTimeRegistry On-Chain Audit Log</span>
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              Permanently record and verify time-sensitive contract investigations directly on BOTChain Testnet.
+              Permanently record and verify time-sensitive contract investigations directly on BOTChain Mainnet.
             </p>
           </div>
           <button
@@ -176,7 +176,7 @@ export const InvestigationRegistry: React.FC<InvestigationRegistryProps> = ({
 
         <div>
           <label className="block text-xs font-semibold text-slate-700 mb-1">
-            Contract Address (BlockTimeRegistry.sol on BOTChain Testnet)
+            Contract Address (BlockTimeRegistry.sol on BOTChain Mainnet)
           </label>
           <div className="flex gap-2">
             <input
@@ -188,7 +188,7 @@ export const InvestigationRegistry: React.FC<InvestigationRegistryProps> = ({
             />
             {contractAddress && (
               <a
-                href={`https://scan.bohr.life/address/${contractAddress}`}
+                href={`https://scan.botchain.ai/address/${contractAddress}`}
                 target="_blank"
                 rel="noreferrer"
                 className="px-3 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-xl text-xs font-medium flex items-center space-x-1 transition"
@@ -306,7 +306,7 @@ export const InvestigationRegistry: React.FC<InvestigationRegistryProps> = ({
             </div>
             {txHash && (
               <a
-                href={`https://scan.bohr.life/tx/${txHash}`}
+                href={`https://scan.botchain.ai/tx/${txHash}`}
                 target="_blank"
                 rel="noreferrer"
                 className="underline font-mono text-[11px] hover:text-green-950"

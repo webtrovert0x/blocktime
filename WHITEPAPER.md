@@ -2,9 +2,9 @@
 ## A Block-Level Debugging and Timestamp Verification Architecture for Time-Sensitive EVM Smart Contracts on BOTChain
 
 **Version:** 1.0.0  
-**Network:** BOTChain Testnet (Chain ID: `968`)  
-**Core Contract:** `BlockTimeRegistry.sol` (`0x0C7F6B890fB52f7B461D95a774B66d1cb4b8bFCB`)  
-**Status:** Mainnet-Ready / Testnet Live  
+**Network:** BOTChain Mainnet (Chain ID: `677`)  
+**Core Contract:** `BlockTimeRegistry.sol` (`0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD`)  
+**Status:** Mainnet Live  
 
 ---
 
@@ -53,7 +53,7 @@ BlockTime resolves these systemic challenges through a dual-layer architecture:
                ▼                              │
 ┌──────────────────────────────┐   ┌──────────┴───────────────┐
 │     BlockTimeRegistry.sol    │   │      BOTChain RPC        │
-│   (On-Chain Audit Records)   │   │  (https://rpc.bohr.life) │
+│   (On-Chain Audit Records)   │   │ (https://rpc.botchain.ai)│
 └──────────────────────────────┘   └──────────────────────────┘
 ```
 
@@ -63,7 +63,7 @@ BlockTime resolves these systemic challenges through a dual-layer architecture:
    - Stores immutable records of deadline verifications, block hashes, timestamps, and audit tags.
 
 2. **Off-Chain Real-Time Cadence Engine**:
-   - Interfaces directly with BOTChain RPC (`https://rpc.bohr.life`).
+   - Interfaces directly with BOTChain RPC (`https://rpc.botchain.ai`).
    - Dynamically measures sliding-window moving averages of block intervals ($\Delta t = t_n - t_{parent}$).
    - Predicts future block heights based on real-time empirical cadence rather than hardcoded assumptions.
    - Audits whether contracts fall within the dangerous $\pm 15$-second miner timestamp variance zone.
@@ -155,21 +155,22 @@ struct Investigation {
 
 ## 7. Deployment Specifications
 
-| Parameter | BOTChain Testnet Detail |
+| Parameter | BOTChain Mainnet Detail |
 | :--- | :--- |
-| **Network Name** | BOTChain Testnet |
-| **Chain ID** | `968` |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
+| **Network Name** | BOTChain Mainnet |
+| **Chain ID** | `677` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
 | **Native Token** | `BOT` (18 Decimals) |
-| **Explorer** | `https://scan.bohr.life/` |
-| **Contract Address** | `0x0C7F6B890fB52f7B461D95a774B66d1cb4b8bFCB` |
-| **Contract Explorer Link** | [View on BohrScan](https://scan.bohr.life/address/0x0C7F6B890fB52f7B461D95a774B66d1cb4b8bFCB) |
+| **Explorer** | `https://scan.botchain.ai/` |
+| **Contract Address** | `0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD` |
+| **Contract Explorer Link** | [View on BotScan](https://scan.botchain.ai/address/0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD) |
 
 ---
 
 ## 8. Conclusion
 
-BlockTime bridges a critical gap in EVM protocol development by treating block timestamps, cadence variances, and gas dynamics as first-class debugging citizens. Through its immutable on-chain registry on BOTChain Testnet and comprehensive reactive developer tooling, BlockTime ensures that protocols relying on time-sensitive logic can verify, predict, and audit temporal behavior with mathematical rigor.
+BlockTime bridges a critical gap in EVM protocol development by treating block timestamps, cadence variances, and gas dynamics as first-class debugging citizens. Through its immutable on-chain registry on BOTChain Mainnet and comprehensive reactive developer tooling, BlockTime ensures that protocols relying on time-sensitive logic can verify, predict, and audit temporal behavior with mathematical rigor.
 
 ---
 *Copyright © 2026 BlockTime Protocol. Open Source under the MIT License.*
+

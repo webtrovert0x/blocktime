@@ -16,7 +16,7 @@ export const ReownAlertBanner: React.FC = () => {
             <strong>Reown AppKit Configuration:</strong> Add your project ID to{' '}
             <code className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded font-mono">REOWN_ID</code> in{' '}
             <code className="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded font-mono">.env</code> to connect
-            wallets. Block inspection, RPC reading, and calculations on BOTChain Testnet work without any setup!
+            wallets. Block inspection, RPC reading, and calculations on BOTChain Mainnet work without any setup!
           </span>
         </div>
         <a

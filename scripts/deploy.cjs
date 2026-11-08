@@ -3,9 +3,12 @@ const fs = require("fs");
 const path = require("path");
 
 async function main() {
+  const network = await hre.ethers.provider.getNetwork();
+  const chainId = Number(network.chainId);
+
   console.log("--------------------------------------------------");
-  console.log("Deploying BlockTimeRegistry to BOTChain Testnet...");
-  console.log("RPC: https://rpc.bohr.life (Chain ID: 968)");
+  console.log(`Deploying BlockTimeRegistry to BOTChain...`);
+  console.log(`RPC: ${hre.network.config.url} (Chain ID: ${chainId})`);
   console.log("--------------------------------------------------");
 
   const [deployer] = await hre.ethers.getSigners();
@@ -23,10 +26,12 @@ async function main() {
   await contract.waitForDeployment();
 
   const contractAddress = await contract.getAddress();
+  const explorerUrl = chainId === 677 ? "https://scan.botchain.ai" : "https://scan.bohr.life";
+
   console.log("==================================================");
   console.log(`>>> BlockTimeRegistry deployed successfully!`);
   console.log(`>>> Contract Address: ${contractAddress}`);
-  console.log(`>>> Explorer: https://scan.bohr.life/address/${contractAddress}`);
+  console.log(`>>> Explorer: ${explorerUrl}/address/${contractAddress}`);
   console.log("==================================================");
 
   // Write deployment info to frontend config
@@ -37,8 +42,8 @@ async function main() {
 
   const deploymentData = {
     address: contractAddress,
-    network: "BOTChain Testnet",
-    chainId: 968,
+    network: chainId === 677 ? "BOTChain Mainnet" : "BOTChain Testnet",
+    chainId: chainId,
     deployedAt: new Date().toISOString(),
   };
 
@@ -54,4 +59,3 @@ main().catch((error) => {
   console.error("Deployment failed:", error);
   process.exitCode = 1;
 });
-

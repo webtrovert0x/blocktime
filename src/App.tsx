@@ -7,6 +7,8 @@ import { DeadlineChecker } from './components/DeadlineChecker';
 import { GasMetrics } from './components/GasMetrics';
 import { InvestigationRegistry } from './components/InvestigationRegistry';
 import { TimeSensitivityTools } from './components/TimeSensitivityTools';
+import { BlockTimeLogo } from './components/BlockTimeLogo';
+import { BotChainLogo } from './components/BotChainLogo';
 import {
   fetchBlockWithDelta,
   fetchRecentBlocks,
@@ -282,31 +284,110 @@ export function App() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex items-center space-x-2">
-            <span className="font-semibold text-slate-700">BlockTime Inspector</span>
-            <span>&bull;</span>
-            <span>BOTChain Testnet (Chain ID 968)</span>
+      {/* BOT Chain Ecosystem Showcase Section */}
+      <section className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 rounded-3xl p-6 sm:p-8 text-white shadow-lg shadow-blue-500/10">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-sm flex-shrink-0">
+                  <BotChainLogo className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <h3 className="text-xl font-bold tracking-tight text-white">BOT Chain Ecosystem</h3>
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/20 text-white backdrop-blur border border-white/30">
+                      Mainnet Live
+                    </span>
+                  </div>
+                  <p className="text-xs text-blue-100">
+                    High-performance, AI-optimized EVM blockchain powering next-generation dApps
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-2.5 bg-white text-blue-700 hover:bg-blue-50 font-semibold text-xs rounded-xl shadow-sm transition flex items-center space-x-2"
+              >
+                <BotChainLogo className="w-4 h-4 rounded-sm flex-shrink-0" />
+                <span>BOT Chain Website</span>
+                <span className="text-[10px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded font-mono">botchain.ai</span>
+              </a>
+
+              <a
+                href="https://scan.botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-2.5 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold text-xs rounded-xl backdrop-blur transition flex items-center space-x-2"
+              >
+                <BotChainLogo className="w-4 h-4 rounded-sm flex-shrink-0" />
+                <span>BOT Chain Explorer</span>
+                <span className="text-[10px] bg-white/20 text-white px-1.5 py-0.5 rounded font-mono">scan.botchain.ai</span>
+              </a>
+            </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://scan.bohr.life"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:text-blue-800 transition"
-            >
-              Explorer (BohrScan)
-            </a>
-            <a
-              href="https://rpc.bohr.life"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:text-blue-800 transition"
-            >
-              RPC Endpoint
-            </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-slate-200 py-8 mt-12 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-slate-100 pb-6">
+            <div className="flex items-center space-x-3">
+              <BlockTimeLogo className="w-9 h-9 rounded-xl shadow-sm flex-shrink-0" />
+              <div>
+                <span className="font-bold text-slate-900 text-sm">BlockTime Inspector</span>
+                <span className="text-slate-400 text-xs ml-2">BOT Chain Mainnet (Chain ID 677)</span>
+              </div>
+            </div>
+
+            {/* Required Links in Footer with Official BOTChain Logo */}
+            <div className="flex flex-wrap items-center gap-4 text-xs font-medium">
+              <a
+                href="https://botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-600 hover:text-blue-600 flex items-center space-x-2 transition"
+              >
+                <BotChainLogo className="w-4 h-4 rounded-sm flex-shrink-0" />
+                <span className="font-semibold text-slate-900">BOT Chain Website:</span>
+                <span className="text-blue-600 underline">https://botchain.ai</span>
+              </a>
+
+              <span className="text-slate-300 hidden sm:inline">&bull;</span>
+
+              <a
+                href="https://scan.botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-600 hover:text-blue-600 flex items-center space-x-2 transition"
+              >
+                <BotChainLogo className="w-4 h-4 rounded-sm flex-shrink-0" />
+                <span className="font-semibold text-slate-900">BOT Chain Explorer:</span>
+                <span className="text-blue-600 underline">https://scan.botchain.ai</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+            <div>
+              Verified Smart Contract:{' '}
+              <a
+                href="https://scan.botchain.ai/address/0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD#code"
+                target="_blank"
+                rel="noreferrer"
+                className="font-mono text-blue-600 hover:text-blue-800 underline"
+              >
+                0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD
+              </a>{' '}
+              <span className="text-green-600 font-semibold ml-1">✓ Verified</span>
+            </div>
+            <div>&copy; 2026 BlockTime Protocol. Built on BOT Chain.</div>
           </div>
         </div>
       </footer>

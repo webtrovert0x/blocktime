@@ -103,7 +103,7 @@ export const GasMetrics: React.FC<GasMetricsProps> = ({
         <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50 flex justify-between items-center">
           <div>
             <h4 className="font-bold text-slate-900 text-sm">Recent Blocks Progression & Gas Ticker</h4>
-            <p className="text-xs text-slate-500">Live block cadence and gas usage on BOTChain Testnet</p>
+            <p className="text-xs text-slate-500">Live block cadence and gas usage on BOTChain Mainnet</p>
           </div>
           <span className="text-xs font-mono text-blue-700 bg-blue-50 border border-blue-200 px-2 py-1 rounded-lg">
             Window: {recentBlocks.length} blocks

@@ -255,7 +255,7 @@ export const BlockInspector: React.FC<BlockInspectorProps> = ({
                 <Lock className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span>
                   <strong>Wallet Not Connected:</strong> You must connect your wallet to submit the on-chain inspection
-                  transaction and pay the gas fee on BOTChain Testnet.
+                  transaction and pay the gas fee on BOTChain Mainnet.
                 </span>
               </div>
               <div className="flex-shrink-0">
@@ -270,7 +270,7 @@ export const BlockInspector: React.FC<BlockInspectorProps> = ({
             <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-900 flex items-center space-x-3">
               <div className="inline-block animate-spin rounded-full h-4 w-4 border-2 border-blue-600 border-t-transparent"></div>
               <div>
-                <p className="font-semibold">Submitting inspection request to BOTChain Testnet...</p>
+                <p className="font-semibold">Submitting inspection request to BOTChain Mainnet...</p>
                 <p className="text-[11px] text-blue-700 mt-0.5">
                   Transaction submitted with gas fee. Once confirmed, the block details will automatically unlock!
                 </p>
@@ -290,12 +290,12 @@ export const BlockInspector: React.FC<BlockInspectorProps> = ({
                 </span>
               </div>
               <a
-                href={`https://scan.bohr.life/tx/${lastTxReceipt.hash}`}
+                href={`https://scan.botchain.ai/tx/${lastTxReceipt.hash}`}
                 target="_blank"
                 rel="noreferrer"
                 className="underline font-mono text-[11px] text-green-800 hover:text-green-950 flex items-center space-x-1"
               >
-                <span>View Gas Tx on BohrScan</span>
+                <span>View Gas Tx on BotScan</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
@@ -342,11 +342,11 @@ export const BlockInspector: React.FC<BlockInspectorProps> = ({
                     {copiedHash ? <Check className="w-3.5 h-3.5 text-green-600" /> : <Copy className="w-3.5 h-3.5" />}
                   </button>
                   <a
-                    href={`https://scan.bohr.life/block/${blockNum.toString()}`}
+                    href={`https://scan.botchain.ai/block/${blockNum.toString()}`}
                     target="_blank"
                     rel="noreferrer"
                     className="p-1 hover:bg-slate-100 rounded text-blue-600 hover:text-blue-800 transition"
-                    title="View on BohrScan"
+                    title="View on BotScan"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>

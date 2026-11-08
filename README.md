@@ -1,13 +1,14 @@
 # BlockTime — Block and Timestamp Inspector
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Network: BOTChain Testnet](https://img.shields.io/badge/Network-BOTChain%20Testnet%20(968)-2563eb.svg)](https://scan.bohr.life/)
+[![Network: BOTChain Mainnet](https://img.shields.io/badge/Network-BOTChain%20Mainnet%20(677)-2563eb.svg)](https://scan.botchain.ai/)
 [![Solidity: ^0.8.20](https://img.shields.io/badge/Solidity-^0.8.20-3b82f6.svg)](https://soliditylang.org/)
 [![Whitepaper](https://img.shields.io/badge/Documentation-Whitepaper-blue.svg)](WHITEPAPER.md)
 
-**BlockTime** is a developer inspection and block-level debugging utility specifically designed for developers building time-sensitive smart contracts (timelock controllers, token vesting schedules, Dutch auctions, staking lockups, liquidation bots, and oracle-dependent protocols) on **BOTChain Testnet**.
+**BlockTime** is a developer inspection and block-level debugging utility specifically designed for developers building time-sensitive smart contracts (timelock controllers, token vesting schedules, Dutch auctions, staking lockups, liquidation bots, and oracle-dependent protocols) on **BOTChain Mainnet**.
 
 - **Repository**: [https://github.com/webtrovert0x/blocktime](https://github.com/webtrovert0x/blocktime)
+- **Live Application**: [https://blocktime-alpha.vercel.app](https://blocktime-alpha.vercel.app)
 - **Technical Whitepaper**: [Read WHITEPAPER.md](WHITEPAPER.md)
 
 ---
@@ -15,22 +16,32 @@
 ## 🚀 Deployed Contract Information
 
 - **Contract Name**: `BlockTimeRegistry.sol`
-- **Network**: **BOTChain Testnet**
-- **Chain ID**: `968`
-- **RPC URL**: `https://rpc.bohr.life`
+- **Network**: **BOTChain Mainnet**
+- **Chain ID**: `677`
+- **RPC URL**: `https://rpc.botchain.ai`
 - **Native Currency**: `BOT`
-- **Deployed Address**: [`0x0C7F6B890fB52f7B461D95a774B66d1cb4b8bFCB`](https://scan.bohr.life/address/0x0C7F6B890fB52f7B461D95a774B66d1cb4b8bFCB)
-- **Explorer**: [BohrScan Block Explorer](https://scan.bohr.life/)
+- **Deployed Address**: [`0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD`](https://scan.botchain.ai/address/0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD)
+- **Contract Verification Status**: [Verified on BotScan](https://scan.botchain.ai/address/0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD#code)
+- **Explorer**: [BotScan Block Explorer](https://scan.botchain.ai/)
+
+### Verified Mainnet Interactions (3 Unique Wallets)
+| # | Action | Wallet | Tx Hash | Block |
+|---|--------|--------|---------|-------|
+| 1 | `requestBlockInspection` | `0x55DA37...eC16` (Deployer) | [`0xad3082...4596c`](https://scan.botchain.ai/tx/0xad30822175891b2c3eb38ff00f993f52df69bd0ea8060207059ee2feaeb4596c) | #29589813 |
+| 2 | `requestBlockInspection` | `0xDEA6Ce...F06b` (Auditor Alpha) | [`0xda376d...7691c`](https://scan.botchain.ai/tx/0xda376d35341221b2d77940ac4b961093e18ff79966c26f99ecee84b88957691c) | #29589816 |
+| 3 | `requestBlockInspection` | `0xdCBDff...0F88` (Auditor Beta) | [`0xbfe14f...75588`](https://scan.botchain.ai/tx/0xbfe14f7414915ad040d423ab195d6f811c8b20547e78d93f42566e35fd975588) | #29589818 |
+| 4 | `requestBlockInspection` | `0xDEA6Ce...F06b` (Auditor Alpha) | [`0x56cd4e...e269a`](https://scan.botchain.ai/tx/0x56cd4e02466595c36adffcf6c79c1b39a7b1560cf12a322b75ee0b62293e269a) | #29590198 |
+| 5 | `requestBlockInspection` | `0xdCBDff...0F88` (Auditor Beta) | [`0x555bd3...d7fa1`](https://scan.botchain.ai/tx/0x555bd38cadf0aa2d34c4207d57daa58cac7bb2e1331c1a10151f322acd9d7fa1) | #29590202 |
 
 ---
 
 ## 🛠️ Features
 
 ### 1. 🔍 Single Block Deep-Dive Inspector (On-Chain Gas Fee Required)
-- Inspecting a block sends an on-chain transaction to `BlockTimeRegistry.requestBlockInspection` on BOTChain Testnet, requiring network gas fees.
+- Inspecting a block sends an on-chain transaction to `BlockTimeRegistry.requestBlockInspection` on BOTChain Mainnet, requiring network gas fees.
 - Records the inspection inquiry permanently on-chain and returns the verified block details.
 - Query any block by **Block Number** or inspect **Latest Block**.
-- Displays exact gas used by the inspection transaction and links to the gas tx on BohrScan.
+- Displays exact gas used by the inspection transaction and links to the gas tx on BotScan.
 - Full breakdown: Unix timestamp, localized display time, UTC time, time delta from previous block ($\Delta t = t_n - t_{n-1}$), gas utilization gauge, base fee, miner address, and state root.
 - Includes historical ledger of gas-paid inspection requests.
 
@@ -53,12 +64,12 @@
   - **EVM $\pm 15$s Timestamp Manipulation Warning**: Alerts developers if the deadline delta falls within the consensus tolerance window where block producers can legally adjust timestamps.
 
 ### 4. 📊 Gas & Block Progression Ticker
-- Live feed of the last 10 blocks on BOTChain Testnet.
+- Live feed of the last 10 blocks on BOTChain Mainnet.
 - Network congestion meter (Low, Moderate, High Congestion based on EVM gas capacity).
 - Real-time block interval calculations and gas limits.
 
 ### 5. 📜 On-Chain Investigation Registry (`BlockTimeRegistry.sol`)
-- Developers and auditors can record verifiable investigation audits directly on BOTChain Testnet.
+- Developers and auditors can record verifiable investigation audits directly on BOTChain Mainnet.
 - Stores target block number, target deadline, category, investigator address, and custom debugging notes.
 - Historical investigation ledger with direct one-click buttons to inspect referenced blocks.
 
@@ -115,7 +126,7 @@ npm run compile
 ```bash
 npm run deploy
 ```
-This deploys `BlockTimeRegistry.sol` to BOTChain Testnet and automatically updates `src/config/deployed.json`.
+This deploys `BlockTimeRegistry.sol` to BOTChain Mainnet and automatically updates `src/config/deployed.json`.
 
 ### 5. Build for Production
 ```bash
@@ -131,7 +142,7 @@ blockTime/
 ├── contracts/
 │   └── BlockTimeRegistry.sol       # On-chain investigation and block inspection registry
 ├── scripts/
-│   └── deploy.cjs                  # Automated deployment script to BOTChain Testnet
+│   └── deploy.cjs                  # Automated deployment script to BOTChain Mainnet
 ├── src/
 │   ├── components/
 │   │   ├── BlockInspector.tsx      # Single block inspection requiring gas fee

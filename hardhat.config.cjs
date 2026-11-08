@@ -19,6 +19,16 @@ module.exports = {
   networks: {
     hardhat: {},
     botchain: {
+      url: "https://rpc.botchain.ai",
+      chainId: 677,
+      accounts: [PRIVATE_KEY],
+    },
+    botchainMainnet: {
+      url: "https://rpc.botchain.ai",
+      chainId: 677,
+      accounts: [PRIVATE_KEY],
+    },
+    botchainTestnet: {
       url: "https://rpc.bohr.life",
       chainId: 968,
       accounts: [PRIVATE_KEY],

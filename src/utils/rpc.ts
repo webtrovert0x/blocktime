@@ -1,9 +1,9 @@
 import { createPublicClient, http, type Block, type Hash } from 'viem';
-import { botchainTestnet } from '../config/chains';
+import { botchainMainnet } from '../config/chains';
 
 export const publicClient = createPublicClient({
-  chain: botchainTestnet,
-  transport: http('https://rpc.bohr.life', {
+  chain: botchainMainnet,
+  transport: http('https://rpc.botchain.ai', {
     batch: true,
     retryCount: 3,
     retryDelay: 1000,

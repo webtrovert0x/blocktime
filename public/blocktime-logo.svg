@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cubeGradientTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <linearGradient id="cubeGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    <linearGradient id="cubeGradientRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="clockDialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#eff6ff" />
+    </linearGradient>
+    <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2563eb" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Isometric Hexagonal Block Structure -->
+  <g filter="url(#logoGlow)">
+    <!-- Top Face -->
+    <polygon points="100,22 168,61 100,100 32,61" fill="url(#cubeGradientTop)" />
+    
+    <!-- Left Face -->
+    <polygon points="32,61 100,100 100,178 32,139" fill="url(#cubeGradientLeft)" />
+    
+    <!-- Right Face -->
+    <polygon points="100,100 168,61 168,139 100,178" fill="url(#cubeGradientRight)" />
+
+    <!-- Top Accent Lines (Circuits/Ticks) -->
+    <line x1="100" y1="36" x2="100" y2="48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+    <line x1="70" y1="52" x2="80" y2="58" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+    <line x1="130" y1="52" x2="120" y2="58" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+  </g>
+
+  <!-- Chronometer / Time Core Centered -->
+  <g transform="translate(100, 118)">
+    <!-- Circular Dial Plate -->
+    <circle r="44" fill="url(#clockDialGrad)" stroke="#2563eb" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))" />
+    <circle r="38" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5" />
+
+    <!-- Clock Hour Ticks -->
+    <line x1="0" y1="-32" x2="0" y2="-26" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="0" y1="32" x2="0" y2="26" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="-32" y1="0" x2="-26" y2="0" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="32" y1="0" x2="26" y2="0" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Minute Ticks (Diagonal) -->
+    <line x1="-22" y1="-22" x2="-18" y2="-18" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="22" y1="-22" x2="18" y2="-18" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="-22" y1="22" x2="-18" y2="18" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="22" y1="22" x2="18" y2="18" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Clock Hands (Time: ~10:10 with precision second hand) -->
+    <!-- Hour Hand -->
+    <line x1="0" y1="0" x2="-14" y2="-12" stroke="#1e3a8a" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Minute Hand -->
+    <line x1="0" y1="0" x2="18" y2="-16" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Second Hand (Orange/Cyan Accent) -->
+    <line x1="0" y1="4" x2="0" y2="-25" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Center Pivot Pin -->
+    <circle r="3.5" fill="#1e3a8a" />
+    <circle r="1.5" fill="#ffffff" />
+  </g>
+</svg>
+

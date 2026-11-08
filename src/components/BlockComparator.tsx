@@ -89,7 +89,7 @@ export const BlockComparator: React.FC<BlockComparatorProps> = ({
           <span>Compare Block Timestamps & Progression</span>
         </h3>
         <p className="text-xs text-slate-500 mb-5">
-          Select any two blocks on BOTChain Testnet to analyze elapsed time, progression speed, average block
+          Select any two blocks on BOTChain Mainnet to analyze elapsed time, progression speed, average block
           duration, and gas utilization shifts.
         </p>
 

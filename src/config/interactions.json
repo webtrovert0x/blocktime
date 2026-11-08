@@ -1,0 +1,56 @@
+{
+  "contractAddress": "0x6Df0eD4cf20Dff23376cab013Dea4f45DB53f2CD",
+  "timestamp": "2026-11-08T22:31:34.195Z",
+  "wallets": [
+    "0x55DA37AbbF8C9141adA4Dd1C2eF7211c0483eC16",
+    "0xDEA6Ce337e27C881b3C9AEC8Ae76255BDDCfB06b",
+    "0xdCBDffB9a17Cbf9521D8A2390fE2831F8F600F88"
+  ],
+  "interactions": [
+    {
+      "num": 1,
+      "wallet": "0x55DA37AbbF8C9141adA4Dd1C2eF7211c0483eC16",
+      "walletLabel": "Wallet 1 (Deployer)",
+      "action": "requestBlockInspection(29589710)",
+      "txHash": "0xad30822175891b2c3eb38ff00f993f52df69bd0ea8060207059ee2feaeb4596c",
+      "blockNumber": 29589813,
+      "explorerUrl": "https://scan.botchain.ai/tx/0xad30822175891b2c3eb38ff00f993f52df69bd0ea8060207059ee2feaeb4596c"
+    },
+    {
+      "num": 2,
+      "wallet": "0xDEA6Ce337e27C881b3C9AEC8Ae76255BDDCfB06b",
+      "walletLabel": "Wallet 2 (Auditor Alpha)",
+      "action": "requestBlockInspection(29589760)",
+      "txHash": "0xda376d35341221b2d77940ac4b961093e18ff79966c26f99ecee84b88957691c",
+      "blockNumber": 29589816,
+      "explorerUrl": "https://scan.botchain.ai/tx/0xda376d35341221b2d77940ac4b961093e18ff79966c26f99ecee84b88957691c"
+    },
+    {
+      "num": 3,
+      "wallet": "0xdCBDffB9a17Cbf9521D8A2390fE2831F8F600F88",
+      "walletLabel": "Wallet 3 (Auditor Beta)",
+      "action": "requestBlockInspection(29589810)",
+      "txHash": "0xbfe14f7414915ad040d423ab195d6f811c8b20547e78d93f42566e35fd975588",
+      "blockNumber": 29589818,
+      "explorerUrl": "https://scan.botchain.ai/tx/0xbfe14f7414915ad040d423ab195d6f811c8b20547e78d93f42566e35fd975588"
+    },
+    {
+      "num": 4,
+      "wallet": "0xDEA6Ce337e27C881b3C9AEC8Ae76255BDDCfB06b",
+      "walletLabel": "Wallet 2 (Auditor Alpha)",
+      "action": "requestBlockInspection(29590295)",
+      "txHash": "0x56cd4e02466595c36adffcf6c79c1b39a7b1560cf12a322b75ee0b62293e269a",
+      "blockNumber": 29590198,
+      "explorerUrl": "https://scan.botchain.ai/tx/0x56cd4e02466595c36adffcf6c79c1b39a7b1560cf12a322b75ee0b62293e269a"
+    },
+    {
+      "num": 5,
+      "wallet": "0xdCBDffB9a17Cbf9521D8A2390fE2831F8F600F88",
+      "walletLabel": "Wallet 3 (Auditor Beta)",
+      "action": "requestBlockInspection(29590695)",
+      "txHash": "0x555bd38cadf0aa2d34c4207d57daa58cac7bb2e1331c1a10151f322acd9d7fa1",
+      "blockNumber": 29590202,
+      "explorerUrl": "https://scan.botchain.ai/tx/0x555bd38cadf0aa2d34c4207d57daa58cac7bb2e1331c1a10151f322acd9d7fa1"
+    }
+  ]
+}

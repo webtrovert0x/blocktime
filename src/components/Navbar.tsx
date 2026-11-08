@@ -1,5 +1,7 @@
 import React from 'react';
-import { Clock, Shield, ExternalLink, Activity } from 'lucide-react';
+import { ExternalLink, Activity } from 'lucide-react';
+import { BlockTimeLogo } from './BlockTimeLogo';
+import { BotChainLogo } from './BotChainLogo';
 
 interface NavbarProps {
   latestBlockNumber?: bigint | null;
@@ -13,14 +15,13 @@ export const Navbar: React.FC<NavbarProps> = ({ latestBlockNumber, contractAddre
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-              <Clock className="w-6 h-6" />
-            </div>
+            <BlockTimeLogo className="w-10 h-10 rounded-xl shadow-md shadow-blue-500/20 flex-shrink-0" />
             <div>
               <div className="flex items-center space-x-2">
                 <span className="text-xl font-bold tracking-tight text-slate-900">BlockTime</span>
-                <span className="px-2 py-0.5 text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 rounded-full">
-                  BOTChain Testnet
+                <span className="px-2 py-0.5 text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 rounded-full inline-flex items-center space-x-1.5">
+                  <BotChainLogo className="w-3.5 h-3.5 rounded-sm" />
+                  <span>BOTChain Mainnet</span>
                 </span>
               </div>
               <p className="text-xs text-slate-500 hidden sm:block">
@@ -45,14 +46,14 @@ export const Navbar: React.FC<NavbarProps> = ({ latestBlockNumber, contractAddre
 
             {/* BOTChain Badge */}
             <a
-              href="https://scan.bohr.life"
+              href="https://scan.botchain.ai"
               target="_blank"
               rel="noreferrer"
-              className="hidden lg:flex items-center space-x-1 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-lg text-xs font-medium transition"
-              title="View BOTChain Testnet Explorer"
+              className="hidden lg:flex items-center space-x-1.5 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-lg text-xs font-medium transition"
+              title="View BOTChain Mainnet Explorer"
             >
-              <Activity className="w-3.5 h-3.5 text-blue-600" />
-              <span>Chain ID: 968</span>
+              <BotChainLogo className="w-3.5 h-3.5 rounded-sm" />
+              <span>Chain ID: 677</span>
               <ExternalLink className="w-3 h-3 text-blue-500" />
             </a>
 
